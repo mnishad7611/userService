@@ -16,7 +16,6 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
-
 	@GetMapping("/msg")
 	public String getMsg(){
 		return "Hey, How you doing ?";
@@ -30,12 +29,10 @@ public class UserController {
 	@GetMapping("/getAllUser")
 	public List<User> getAllUsers(){
 		return userService.getUsers();
-
 	}
 
 	@GetMapping("/getUpdatedUser")
 	public List<User> updatedNames(){
 		return userService.capsAllUsers();
 	}
-	
 }
