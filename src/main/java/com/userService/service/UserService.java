@@ -13,6 +13,8 @@ public interface UserService {
 	public List<User> getUsers();
 
 	public List<User> capsAllUsers();
+
+	public User updateUser(long id, String city);
 	
 
 }

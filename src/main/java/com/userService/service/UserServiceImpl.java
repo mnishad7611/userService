@@ -2,6 +2,7 @@ package com.userService.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -52,6 +53,20 @@ public class UserServiceImpl implements UserService {
 
 
 	public void delete(long id) {
+
+	}
+
+	@Override
+	public User updateUser(long id, String city){
+
+		Optional<User> optional = userRepository.findById(id);
+		if(optional.isPresent()){
+			User user = optional.get();
+			user.setCity(city);
+			User result = userRepository.save(user); 
+			return result;
+		}   
+	   	return null;
 
 	}
 

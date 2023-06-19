@@ -12,9 +12,9 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends CrudRepository<User,Long>{
 	
-	public Optional<User> findById(Long id);
+	//public Optional<User> findById(Long id);
 
-	public Optional<User> findByName(String name);
+	//public Optional<User> findByName(String name);
 }
 
 
