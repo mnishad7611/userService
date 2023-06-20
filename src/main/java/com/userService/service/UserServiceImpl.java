@@ -51,11 +51,6 @@ public class UserServiceImpl implements UserService {
 		return users;
 	}
 
-
-	public void delete(long id) {
-
-	}
-
 	@Override
 	public User updateUser(long id, String city){
 
@@ -67,6 +62,12 @@ public class UserServiceImpl implements UserService {
 			return result;
 		}   
 	   	return null;
+
+	}
+
+	@Override
+	public void delete(long id){
+		userRepository.deleteById(id);
 
 	}
 

@@ -15,6 +15,8 @@ public interface UserService {
 	public List<User> capsAllUsers();
 
 	public User updateUser(long id, String city);
+
+	public void delete(long id);
 	
 
 }
